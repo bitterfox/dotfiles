@@ -143,3 +143,7 @@
 ;; cua-mode
 (cua-mode t)
 (setq cua-enable-cua-keys nil)
+
+;; git-gutter-fringe
+(require 'git-gutter-fringe)
+(global-git-gutter-mode t)
