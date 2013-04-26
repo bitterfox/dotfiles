@@ -1,0 +1,18 @@
+[user]
+	name = mot
+	email = mot@example.com # dummy
+[color]
+	ui = auto
+[core]
+	editor = emacs -q
+	pager = less
+[alias]
+    graph = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+
+    st = status
+    gr = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+    cm = commit
+    co = checkout
+
+    br = branch
+    remote-br = branch -r
