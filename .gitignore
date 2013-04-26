@@ -1,0 +1,9 @@
+
+.emacs.d/ac-comphist.dat
+.emacs.d/anything-c-adaptive-history
+.emacs.d/auto-save-list
+.emacs.d/session.*
+.emacs.d/tramp
+.emacs.d/auto-complete
+.emacs.d/elpa/archives
+*.elc
