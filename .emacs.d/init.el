@@ -147,3 +147,10 @@
 ;; git-gutter-fringe
 (require 'git-gutter-fringe)
 (global-git-gutter-mode t)
+
+;; haskell-mode
+(require 'haskell-mode)
+(add-to-list 'auto-mode-alist '("\\.hs$" . haskell-mode))
+(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
+
