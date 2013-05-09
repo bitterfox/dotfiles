@@ -179,3 +179,17 @@
     ("\\subparagraph{%s}" . "\\subparagraph*{%s}")
 ))
 
+;; twittering-mode読み込み
+(require 'twittering-mode)
+;; 起動時パスワード認証 *要 gpgコマンド
+(setq twittering-use-master-password t)
+;; 表示する書式 区切り線いれたら見やすい
+(setq twittering-status-format "%i @%s %S %p: \n%T  [%@]%r %R %f%L\n -------------------------------------------")
+;; アイコンを表示する
+(setq twittering-icon-mode t)
+;; アイコンサイズを変更する *48以外を希望する場合 要 imagemagickコマンド
+;; (setq twittering-convert-fix-size 40)
+;; 更新の頻度（秒）
+(setq twittering-timer-interval 20)
+;; ツイート取得数
+(setq twittering-number-of-tweets-on-retrieval 50)
