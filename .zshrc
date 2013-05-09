@@ -3,11 +3,12 @@ colors
 
 export LANG=ja_JP.UTF-8
 
-PROMPT="%U%n@%m%#%u "
+PROMPT="
+%{${fg[green]}%}[%d]%{${reset_color}%}
+%U%n@%m%#%u "
 PROMPT2="> "
 [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && PROMPT="%{${fg[red]}%}${PROMPT}%{${reset_color}%}"
 SPROMPT="%B%r is correct? [Yes, No, About, Edit]:%b "
-#RPROMPT="[%~]"
 
 # auto change directory
 #
@@ -143,6 +144,10 @@ _Z_CMD=j
 source ~/dotfiles/.zsh/z.sh
 function precmd () {
     _z --add "$(pwd -P)"
+
+# PROMPT="
+# %{${fg[green]}%}[%d] %D %* ($(uptime | awk -e '{print $11}' | sed -e 's/,//g')) %{${reset_color}%}
+# %U%n@%m%#%u "
 }
 # TAB補完の機能をaliasにも追加
 compctl -U -K _z_zsh_tab_completion $_Z_CMD
@@ -321,6 +326,6 @@ function _update_vcs_info_msg() {
         prompt="${(j: :)messages}"
     fi
 
-    RPROMPT="$prompt [%~]"
+    RPROMPT="$prompt"
 }
 add-zsh-hook precmd _update_vcs_info_msg
