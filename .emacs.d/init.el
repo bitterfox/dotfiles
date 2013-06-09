@@ -193,3 +193,6 @@
 (setq twittering-timer-interval 20)
 ;; ツイート取得数
 (setq twittering-number-of-tweets-on-retrieval 50)
+
+;; json-mode
+(require 'json-mode)
