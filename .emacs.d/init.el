@@ -19,7 +19,25 @@
 (column-number-mode t)
 
 ;; タブ幅の設定
-(setq-default tab-width 4 indent-tabs-mode nil)
+;;(setq-default tab-width 4 indent-tabs-mode nil)
+
+;;(add-hock 'c-mode-common-hock
+;;              '(lambda ()
+;;                 (c-set-style "bsd")
+;;                 (setq c-basic-offset 4)
+;;                 (setq indent-tabs-mode nil)
+;;))
+ (add-hook 'c-mode-common-hook
+                '(lambda ()
+                  (c-set-style "bsd")
+;; ;              (setq c-indent-level 0)
+;; ;              (setq c-brace-offset 0)
+;; ;              (setq c-continued-statement-offset 0)
+;; ;              (setq c-tab-width 4)
+                  (setq c-basic-offset 4)
+;; ;              (setq tab-width 4)
+                  (setq indent-tabs-mode nil)
+ ))
 
 ;; Emacs標準のオートセーブを無効化
 (setq backup-inhibited t)

@@ -14040,7 +14040,7 @@ its default 80x25 state -- dark grey on black."
       (background-mode . dark)
       (border-color . "black")
       (cursor-color . "orange")
-      (foreground-color . "green")
+      (foreground-color . "white")
       (mouse-color . "yellow"))
      ((help-highlight-face . underline)
       (list-matching-lines-face . bold)
